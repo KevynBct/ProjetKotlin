@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@null"
+            app:title="Edition de repas"
+            android:elevation="5dp"
+            app:titleTextColor="@color/colorPrimary"/>
+    <View
+            android:id="@+id/toolbar_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/colorAccent" />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_border"
+        android:id="@+id/layoutFood1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <EditText
+                android:layout_width="287dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editFood1"
+                android:layout_below="@+id/toolbar_border"
+                android:hint="Ingrédient 1"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkAvailable1"
+            android:layout_below="@+id/toolbar_border"
+            android:layout_alignBottom="@+id/layoutFood1"
+            android:layout_toRightOf="@+id/layoutFood1"
+            android:text="Disponible"
+            android:textSize="12sp"/>
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutFood1"
+            android:id="@+id/layoutFood2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+    <EditText
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editFood2"
+            android:hint="Ingrédient 2"
+            android:layout_below="@+id/layoutFood1"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkAvailable2"
+            android:layout_below="@+id/layoutFood1"
+            android:layout_alignBottom="@+id/layoutFood2"
+            android:layout_toRightOf="@+id/layoutFood2"
+            android:text="Disponible"
+            android:textSize="12sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textMidi"
+            android:layout_below="@+id/layoutFood2"
+            android:text="Midi"
+            android:layout_toLeftOf="@+id/midiEvening"/>
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/midiEvening"
+            android:layout_below="@+id/layoutFood2"
+            android:layout_centerHorizontal="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textEvening"
+            android:layout_below="@+id/layoutFood2"
+            android:text="Soir"
+            android:layout_toRightOf="@+id/midiEvening"/>
+
+    <View
+            android:id="@+id/note_border"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/midiEvening"
+            android:background="@color/colorAccent" />
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/note_border"
+            android:id="@+id/layoutNote"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="10dp">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/note"
+                    style="@style/NoteStyle"/>
+    </android.support.design.widget.TextInputLayout>
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextCard">
+        <item name="android:textSize">25sp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:maxWidth">160dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="NoteStyle">
+        <item name="android:gravity">top</item>
+        <item name="android:layout_margin">7dp</item>
+        <item name="android:hint">Note...</item>
+    </style>
+
+</resources>
